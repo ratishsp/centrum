@@ -13,6 +13,18 @@ This repo contains code for [Multi-Document Summarization with Centroid-Based Pr
   year = {2022}
 }
 ```
+## Requirements
+
+Create conda environment:
+```bash
+conda create -n centrum_env python=3.7
+conda activate centrum_env
+conda install pytorch cudatoolkit=11 -c pytorch
+```
+All dependencies can be installed via:
+```bash
+pip install -r requirements.txt
+```
 
 ## Code Details
 The scripts to create the preprocessed NewSHead dataset are located in `utils` directory
