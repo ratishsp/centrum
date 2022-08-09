@@ -1,6 +1,6 @@
 
 # Centrum 
-This repo contains code for Multi-Document Summarization with Centroid-Based Pretraining (Ratish Puduppully and Mark Steedman.
+This repo contains code for [Multi-Document Summarization with Centroid-Based Pretraining](https://arxiv.org/abs/2208.01006) (Ratish Puduppully and Mark Steedman.
 
 ## Citation
 ```
