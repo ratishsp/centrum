@@ -155,5 +155,5 @@ python -m torch.distributed.launch --nproc_per_node=4 run_centrum.py \
     --generation_max_length 1024
 ```
 ## Acknowledgements
-Some code for preprocessing is based on the [Primera repo](https://github.com/allenai/PRIMER).
+Some code for preprocessing is based on the [Primera repo](https://github.com/allenai/PRIMER). The script run_centrum.py is based on the [run_summarization.py](https://github.com/huggingface/transformers/blob/master/examples/pytorch/summarization/run_summarization.py) on HuggingFace Transformers.
 
