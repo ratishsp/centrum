@@ -556,6 +556,7 @@ def main():
             ]
 
         model_inputs["labels"] = labels["input_ids"]
+        model_inputs["labels"] = [x[1:] for x in model_inputs["labels"]]
         model_inputs["global_attention_mask"] = [[1 if y in [tokenizer.cls_token_id, docsep_token_id] else 0 for y in x]
                                                  for x in model_inputs["input_ids"]]
         return model_inputs
