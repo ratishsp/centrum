@@ -17,7 +17,7 @@ This repo contains code for [Multi-Document Summarization with Centroid-Based Pr
 
 Create conda environment:
 ```bash
-conda create -n centrum_env python=3.7
+conda create -n centrum_env python=3
 conda activate centrum_env
 conda install pytorch cudatoolkit=11 -c pytorch
 ```
