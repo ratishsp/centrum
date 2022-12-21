@@ -653,6 +653,7 @@ def main():
         result = metric.compute(predictions=decoded_preds, references=decoded_labels, use_stemmer=True)
         # Extract a few results from ROUGE
         result = {key: value.mid.fmeasure * 100 for key, value in result.items()}
+        result["avgr"] = (result["rouge1"] + result["rouge2"] + result["rougeL"])/3
 
         prediction_lens = [np.count_nonzero(pred != tokenizer.pad_token_id) for pred in preds]
         result["gen_len"] = np.mean(prediction_lens)
