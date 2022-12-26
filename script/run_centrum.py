@@ -625,9 +625,11 @@ def main():
         label_pad_token_id=label_pad_token_id,
         pad_to_multiple_of=8 if training_args.fp16 else None,
     )
-
+    process_id=int(os.environ["RANK"])
+    num_process=int(os.environ["WORLD_SIZE"])
+    random_seed = training_args.seed
     # Metric
-    metric = load_metric("rouge")
+    metric = load_metric("rouge", process_id=process_id, num_process=num_process, experiment_id=random_seed)
 
     def postprocess_text(preds, labels):
         preds = [pred.strip() for pred in preds]
